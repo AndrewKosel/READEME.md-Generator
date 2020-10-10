@@ -1,7 +1,7 @@
 const inquirer = require('inquirer');
 const fs = require('fs');
 const util = require('util');
-
+const axios = require('axios');
 
 const writeFileAsynch = util.promisify(fs.writeFile);
 
@@ -80,7 +80,14 @@ function promptUser() {
 //
 
 function generateReadme(response) {
+    let gitHubImage; 
+    let queryURL = `https://api.github.com/users/${response.profile}`;
+    axios.get(queryURL).then(function(res){
+    this.gitHubImage = res.data.avatar_url;
+    console.log(gitHubImage);
+}); console.log(gitHubImage);
     return `
+    
     # ${response.title}
 
     # Table of Contents
@@ -108,6 +115,7 @@ function generateReadme(response) {
     ## Questions
         If you have any questions you can go to my GitHub profile:
         -[GitHub Profile](https://github.com/${response.profile})
+        -[image]${gitHubImage}
         My email adress is ${response.email} if you have any more questions
 
     ## Badges
@@ -116,7 +124,16 @@ function generateReadme(response) {
     ![shields.io](https://shields.io/)`;
 }
 console.log(generateReadme)
-// Function needed to start program
+// Function needed to start program`
+
+
+// const axios = require("axios");
+// const queryURL = "https://api.github.com/users/rogermle";
+// axios
+// .get(queryURL)
+// .then(function(whatever){
+//     console.log(whatever.data.avatar_url);
+// });
 
 async function init() {
     try {
