@@ -1,0 +1,28 @@
+{
+  "name": "readme-generator",
+  "version": "1.0.0",
+  "description": "# Table of Contents",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Andrew Kosel",
+  "license": "MIT",
+  "dependencies": {
+    "dotenv": "^8.0.0",
+    "inquirer": "^6.3.1"
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ph-kandy/READEME.md-Generator.git"
+  },
+  "keywords": [
+    "readme",
+    "generator"
+  ],
+  "bugs": {
+    "url": "https://github.com/ph-kandy/READEME.md-Generator/issues"
+  },
+  "homepage": "https://github.com/ph-kandy/READEME.md-Generator#readme"
+}
