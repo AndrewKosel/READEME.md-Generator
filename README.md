@@ -10,6 +10,7 @@ This application takes user input and creates a README.md file. When the applica
 * [Built With](#built_with)
 * [Contributors](#contributors)
 * [Author](#author)
+* [Video](#video)
 * [License](#license)
 
 
@@ -35,6 +36,10 @@ My studygroup, instructional team, and my tutor!
 Andrew Kosel
   
 ![Github Profile Picture](https://github.com/ph-kandy.png)
+
+## Video
+
+[![Watch the video](https://user-images.githubusercontent.com/70727213/95645101-c739c900-0a70-11eb-91a7-83db8ec6797b.png)](https://www.youtube.com/watch?v=BZDB2W2Ijm8&feature=youtu.be)
 
 ## License
 
