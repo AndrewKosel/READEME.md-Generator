@@ -83,57 +83,46 @@ function generateReadme(response) {
     let gitHubImage; 
     let queryURL = `https://api.github.com/users/${response.profile}`;
     axios.get(queryURL).then(function(res){
-    this.gitHubImage = res.data.avatar_url;
+    gitHubImage = res.data.avatar_url;
     console.log(gitHubImage);
 }); console.log(gitHubImage);
-    return `
-    
-    # ${response.title}
+    return `# ${response.title}
 
-    # Table of Contents
+# Table of Contents
     
-    * [Installation](#installation)
-    * [Usage](#usage)
-    * [Credits](#credits)
-    * [License](#license)
+* [Installation](#installation)
+* [Usage](#usage)
+* [Credits](#credits)
+* [License](#license)
     
-    ## Description
-        ${response.description} 
-    ## Installation
-        ${response.installation}    
-    ## Usage 
-        ${response.usage}
-    ## Test
-        ${response.test}
-    ## License
-    To learn more about the license, click the link below.
-    - [License](https://opensource.org/licenses${response.license})
-    ## Credits
-        ${response.credit}    
-    ## Contribuiting
-        ${response.contributing}    
-    ## Questions
-        If you have any questions you can go to my GitHub profile:
-        -[GitHub Profile](https://github.com/${response.profile})
-        -[image]${gitHubImage}
-        My email adress is ${response.email} if you have any more questions
+## Description
+${response.description} 
+## Installation
+${response.installation}    
+## Usage 
+${response.usage}
+## Test
+${response.test}
+## License
+To learn more about the license, click the link below.
+- [License](https://opensource.org/licenses${response.license})
+## Credits
+${response.credits}    
+## Contribuiting
+${response.contributing}    
+## Questions
+If you have any questions you can go to my GitHub profile:
+-[GitHub Profile](https://github.com/${response.profile})
+-[Image](https://github.com/${response.profile}.png)
+My email adress is ${response.email} if you have any more questions
 
-    ## Badges
+## Badges
     
-    ![badmath](https://img.shields.io/github/languages/top/nielsenjared/badmath)  
-    ![shields.io](https://shields.io/)`;
+![badmath](https://img.shields.io/github/languages/top/nielsenjared/badmath)  
+![shields.io](https://shields.io/)
+`;
 }
 console.log(generateReadme)
-// Function needed to start program`
-
-
-// const axios = require("axios");
-// const queryURL = "https://api.github.com/users/rogermle";
-// axios
-// .get(queryURL)
-// .then(function(whatever){
-//     console.log(whatever.data.avatar_url);
-// });
 
 async function init() {
     try {
